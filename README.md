@@ -4,6 +4,7 @@ A simple quiz game built with Python.
 
 ![Python 3.12](https://img.shields.io/badge/python-3.12-blue)
 
+
 ## Table of Contents
 
 * [Features](#features)
