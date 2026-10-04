@@ -1,123 +1,248 @@
-# PythoN Quiz Game
-A simple quiz game builtwith python
-## Tabele of contents
+# Python Quiz Game
 
-- [PythoN Quiz Game](#python-quiz-game)
-- [Tabele of contents](#tabele-of-contents)
-- [Feature](#feature)
-- [Projects](#projects)
-- [Requirments](#requirments)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Example](#example)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [Licence](#licence)
-- [Author](#author)
+A simple quiz game built with Python.
 
+![Python 3.12](https://img.shields.io/badge/python-3.12-blue)
 
+## Table of Contents
 
-## Feature
-- Quiz system
-  - Asks the player multiple question
-  - Checks the answers automaticlly
-  - Calculate the fanal score
-- Results storeage
-    - Saves quiz results in `resultstxt`
-- Admin Mode
-  - asks for admin password
-  - checks if the password is corect
-  - keeps the privte inforamtion outside the main python file
-  - Loads the assword form '.env'
+* [Features](#features)
+* [Project Structure](#project-structure)
+* [File Description](#file-description)
+* [Requirements](#requirements)
+* [Installation](#installation)
+* [Environment Setup](#environment-setup)
+* [Usage](#usage)
+* [Example](#example)
+* [Screenshots](#screenshots)
+* [Demo](#demo)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [License](#license)
+* [Author](#author)
 
+---
 
-```txt
+## Features
 
+* **Quiz System**
+
+  * Asks the player multiple questions
+  * Checks the answers automatically
+  * Calculates the final score
+
+* **Results Storage**
+
+  * Saves quiz results in `result.txt`
+
+* **Admin Mode**
+
+  * Asks for an admin password
+  * Checks if the password is correct
+  * Keeps private information outside the main Python file
+  * Loads the password from `.env`
+
+---
+
+## Project Structure
+
+```text
 python_quiz_game/
-| main.py
-| question.py
-| requirements.txt
-| .env example
-| .gitignore 
-| READ.md
+│
+├── .env.example
+├── .gitignore
+├── main.py
+├── question.py
+├── requirements.txt
+├── README.md
+├── result.txt
+│
+├── gifs/
+│   └── demo.gif
+│
+└── pictures/
+    ├── pic1.png
+    ├── pic2.png
+    └── pic3.png
 ```
-### File Description
-- `main.py` - main file used to run quiz game
-- `question` - stores questions and answers
-- `requirments.txt` - lists the python packages needed for the project
-- `.env.example` - shows the envoirment variables needed by project
-- `gitignore` - tells git wich files and folders shold notbe tracked
-- `README.md`
 
-## Requirments
-before runnin the project, make sure you have:
-- `python 3`
-- `python-dotenv`
+### File Description
+
+| File                | Description                                             |
+| ------------------- | ------------------------------------------------------- |
+| `main.py`           | Main file used to run the quiz game                     |
+| `question.py`       | Stores questions and answers                            |
+| `requirements.txt`  | Lists the Python packages needed for the project        |
+| `.env.example`      | Shows the environment variables needed by the project   |
+| `.gitignore`        | Tells Git which files and folders should not be tracked |
+| `README.md`         | Contains the project documentation                      |
+| `result.txt`        | Stores the quiz results                                 |
+| `pictures/`         | Stores project screenshots                              |
+| `pictures/pic1.png` | Screenshot of the game start                            |
+| `pictures/pic2.png` | Screenshot of the quiz screen                           |
+| `pictures/pic3.png` | Screenshot of the final result                          |
+| `gifs/`             | Stores demo GIF files                                   |
+| `gifs/demo.gif`     | Shows the project demo                                  |
+
+---
+
+## Requirements
+
+Before running the project, make sure you have:
+
+* Python 3.12
+* `python-dotenv`
+
+---
 
 ## Installation
-1. open a terminal in the project folder.
-2. check that python is installed:
+
+1. Open a terminal in the project folder.
+
+2. Check that Python is installed:
+
+```bash
+python --version
+```
+
+3. Install the required packages:
+
 ```bash
 pip install -r requirements.txt
 ```
-## Envoirment Setup
-1. create a `.env` file from `.env.example`:
-```bash
-cp .env.example . env
+
+---
+
+## Environment Setup
+
+1. Create a `.env` file from `.env.example`.
+
+### Windows PowerShell
+
+```powershell
+Copy-Item .env.example .env
 ```
-2. open the new `.env` file
-3. replace the example value with your own password
+
+### Linux / macOS
+
+```bash
+cp .env.example .env
+```
+
+2. Open the new `.env` file.
+
+3. Replace the example value with your own password:
+
 ```text
 QUIZ_ADMIN_PASSWORD=your_password_here
 ```
-4. save the file
 
-> Do not commit your `.env` file because it may contaain private information
-> 
+4. Save the file.
+
+> Do not commit your `.env` file because it may contain private information.
+
+---
+
 ## Usage
-1. open a terminal in the project folder
-2. run the quiz game
+
+1. Open a terminal in the project folder.
+
+2. Run the quiz game:
+
 ```bash
 python main.py
 ```
-3. choose `yes` or `no` for admin mode
-4. if you chose `yes`, enter the password from your `.env` file
-5. enter your name
-6. answer the questions
-7. see your final score and massage
-8. your result is saved in `result.txt` 
+
+3. Choose `yes` or `no` for Admin Mode.
+
+4. If you chose `yes`, enter the password from your `.env` file.
+
+5. Enter your name.
+
+6. Answer the questions.
+
+7. See your final score and message.
+
+8. Your result is saved in `result.txt`.
+
+---
 
 ## Example
+
 ```text
-do u want to open admin mode? yes/no: no
-whats your name? alex
-welcome
+Do you want to open Admin Mode? yes/no: no
 
-what language are we using? c++
-wrong
+What's your name? Alex
 
-what command starts a git? git init
-correct
+Welcome!
 
-what command shows git status?git --oneline
-wrong
+What language are we using? C++
 
-your score is: 1 out of 3
-keep practicing alex
+Wrong!
+
+What command starts a Git repository? git init
+
+Correct!
+
+What command shows Git status? git status
+
+Correct!
+
+Your score is: 2 out of 3
+
+Keep practicing, Alex!
 ```
 
+---
+
+## Screenshots
+
+### Start Game
+
+![Start Game](pictures/pic1.png)
+
+### Quiz
+
+![Quiz](pictures/pic2.png)
+
+### Final Score
+
+![Final Score](pictures/pic3.png)
+
+---
+
+## Demo
+
+![Quiz Game Demo](gifs/demo.gif)
+
+---
 
 ## Roadmap
- - [x] add multiple quiz question
- - [x] calculate the finale score 
- - [x] save results to a file
- - [x] add admin mode
- - [ ] add more quiz questions
- -  [ ] add difficulty levels
- - [ ] adda timer
-## Contributing 
 
-## Licence
+* [x] Add multiple quiz questions
+* [x] Calculate the final score
+* [x] Save results to a file
+* [x] Add Admin Mode
+* [ ] Add more quiz questions
+* [ ] Add difficulty levels
+* [ ] Add a timer
+
+---
+
+## Contributing
+
+Contributions and suggestions are welcome.
+
+If you find a bug or have an idea for improving the project, feel free to create an issue or submit a pull request.
+
+---
+
+## License
+
+This project is created for learning and educational purposes.
+
+---
 
 ## Author
-create by [Amir hossein](https://github.com/A_H_sourghali)
+
+Created by [Amirhossein Sourghali](https://github.com/a-h-ourghali)
